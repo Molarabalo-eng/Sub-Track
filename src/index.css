@@ -1,0 +1,53 @@
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* CSS Variables for Light Mode (Default) */
+  --bg-color: #f8f9fa;
+  --text-color: #1f1f22;
+  --card-bg: #ffffff;
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --border-color: #e5e7eb;
+  --text-muted: #6b7280;
+
+  color-scheme: light dark;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+  font-synthesize: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark Mode Overrides */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1a1c;
+    --text-color: rgba(255, 255, 255, 0.87);
+    --card-bg: #27272a;
+    --primary-color: #6366f1;
+    --primary-hover: #4f46e5;
+    --border-color: #3f3f46;
+    --text-muted: #a1a1aa;
+  }
+}
+
+/* Base Body Styles */
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  max-width: 600px; /* Mobile-first sizing */
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+}
